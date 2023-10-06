@@ -3,6 +3,7 @@
 namespace NurAzliYT\SHOP;
 
 use cooldogedev\BedrockEconomy\BedrockEconomy;
+use pocketmine\plugin\Plugin;
 use pocketmine\player\Player;
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
