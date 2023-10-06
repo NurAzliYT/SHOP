@@ -1,6 +1,6 @@
 <?php
 
-namespace SafiraaCute\Shop\events;
+namespace NurAzliYT\SHOP\events;
 
 use pocketmine\event\player\PlayerEvent;
 use pocketmine\player\Player;
