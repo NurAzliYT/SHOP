@@ -21,7 +21,7 @@ class Main extends PluginBase implements Listener {
     public ?BedrockEconomy $bedrockeconomy;
 
     public function onEnable(): void {
-		self::$instance = $this; 
+		self::$instance = $this; .
 		$this->saveResource("shops.yml");
 		$this->shops = (new Config($this->getDataFolder() . "shops.yml", Config::YAML))->getAll();
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
