@@ -1,6 +1,6 @@
 <?php
 
-namespace SafiraaCute\Shop;
+namespace NurAzliYT\SHOP;
 
 use pocketmine\network\mcpe\protocol\PlaySoundPacket;
 use pocketmine\player\Player;
