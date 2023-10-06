@@ -3,6 +3,7 @@ author: NurAzliYT
 main: NurAzliYT\SHOP\Main
 api: 5.0.0
 version: 1.0.0
+depend: BedrockEconomy
 
 commands:
  shop:
