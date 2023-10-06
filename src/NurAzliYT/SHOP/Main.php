@@ -1,8 +1,8 @@
 <?php
 
-namespace SafiraaCute\Shop;
+namespace NurAzliYT\SHOP;
 
-use onebone\economyapi\EconomyAPI;
+use cooldogedev\BedrockEconomy\BedrockEconomy;
 use pocketmine\player\Player;
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
@@ -17,7 +17,7 @@ class Main extends PluginBase implements Listener {
     /** @var array $shops */
     public array $shops;
     /** @var EconomyAPI|null $economy */
-    public ?EconomyAPI $economy;
+    public ?BedrockEconomy $economy;
 
     public function onEnable(): void {
 		self::$instance = $this; 
@@ -25,7 +25,7 @@ class Main extends PluginBase implements Listener {
 		$this->shops = (new Config($this->getDataFolder() . "shops.yml", Config::YAML))->getAll();
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 		$this->getLogger()->info("Plugin Enable");
-		$this->economy = $this->getServer()->getPluginManager()->getPlugin("EconomyAPI");
+		$this->economy = $this->getServer()->getPluginManager()->getPlugin("BedrockEconomy");
 	}
 
     /**
