@@ -1,0 +1,14 @@
+name: Shop
+author: SafiraaCute
+main: SafiraaCute\Shop\Main
+api: 5.0.0
+version: 1.0.0
+
+commands:
+ shop:
+  description: "Shop Command"
+  permission: shop.cmd
+  
+permissions:
+ shop.cmd:
+  default: true
