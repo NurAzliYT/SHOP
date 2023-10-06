@@ -118,7 +118,7 @@ class ShopLogic extends PublicMenu {
     public function openBuyItemConfirmationMenu(Player $player, string $idMeta, int $cost, int $count, string $namee): void {
         $bedrockeconomy = $this->getPlugin()->bedrockeconomy;
         $dataShop = $this->getConfig();
-        $money = $economy->myMoney($player);
+        $money = $bedrockeconomy->myMoney($player);
         if ($money < $cost) {
             $missing = (int)$money - $cost;
             $str = str_replace('-', '', $missing);
