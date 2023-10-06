@@ -5,6 +5,7 @@ namespace NurAzliYT\SHOP;
 use pocketmine\item\LegacyStringToItemParser;
 use pocketmine\item\LegacyStringToItemParserException;
 use pocketmine\item\StringToItemParser;
+use pocketmine\item\Item;
 use NurAzliYT\SHOP\events\PlayerSuccessBuyEvent;
 use jojoe77777\FormAPI\SimpleForm;
 use jojoe77777\FormAPI\CustomForm;
@@ -99,7 +100,7 @@ class ShopLogic extends PublicMenu {
                 $this->openBuyItemConfirmationMenu($player, $idMeta, $total, $count, $namee);
             }
         });
-        $economy = $this->getPlugin()->economy;
+        $bedrockeconomy = $this->getPlugin()->economy;
         $form->setTitle($namee);
         $form->addLabel('§bYour Money: §e' . self::onFormatMoney($economy->myMoney($player)));
         $form->addSlider('Please enter an amount: ', 1, 64, 1);
