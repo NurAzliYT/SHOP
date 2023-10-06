@@ -1,6 +1,6 @@
 <?php
 
-namespace SafiraaCute\Shop;
+namespace NurAzliYT\SHOP;
 
 class PublicMenu {
 
@@ -17,6 +17,6 @@ class PublicMenu {
      * @return void
      */
     public function sendMessageForm($sender, $message): void {
-        $sender->sendMessage("§a[Shop] §f" . $message);
+        $sender->sendMessage("§a[SHOP] §f" . $message);
     }
 }
