@@ -1,11 +1,11 @@
 <?php
 
-namespace SafiraaCute\Shop;
+namespace NurAzliYT\SHOP;
 
 use pocketmine\item\LegacyStringToItemParser;
 use pocketmine\item\LegacyStringToItemParserException;
 use pocketmine\item\StringToItemParser;
-use SafiraaCute\Shop\events\PlayerSuccessBuyEvent;
+use NurAzliYT\SHOP\events\PlayerSuccessBuyEvent;
 use jojoe77777\FormAPI\SimpleForm;
 use jojoe77777\FormAPI\CustomForm;
 use pocketmine\player\Player;
