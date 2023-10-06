@@ -100,7 +100,7 @@ class ShopLogic extends PublicMenu {
                 $this->openBuyItemConfirmationMenu($player, $idMeta, $total, $count, $namee);
             }
         });
-        $bedrockeconomy = $this->getPlugin()->economy;
+        $bedrockeconomy = $this->getPlugin()->bedrockeconomy;
         $form->setTitle($namee);
         $form->addLabel('§bYour Money: §e' . self::onFormatMoney($economy->myMoney($player)));
         $form->addSlider('Please enter an amount: ', 1, 64, 1);
@@ -116,7 +116,7 @@ class ShopLogic extends PublicMenu {
      * @return void
      */
     public function openBuyItemConfirmationMenu(Player $player, string $idMeta, int $cost, int $count, string $namee): void {
-        $economy = $this->getPlugin()->economy;
+        $bedrockeconomy = $this->getPlugin()->bedrockeconomy;
         $dataShop = $this->getConfig();
         $money = $economy->myMoney($player);
         if ($money < $cost) {
