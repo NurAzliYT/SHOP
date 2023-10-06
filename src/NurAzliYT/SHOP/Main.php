@@ -17,7 +17,7 @@ class Main extends PluginBase implements Listener {
     /** @var array $shops */
     public array $shops;
     /** @var EconomyAPI|null $economy */
-    public ?BedrockEconomy $economy;
+    public ?BedrockEconomy $bedrockeconomy;
 
     public function onEnable(): void {
 		self::$instance = $this; 
@@ -25,7 +25,7 @@ class Main extends PluginBase implements Listener {
 		$this->shops = (new Config($this->getDataFolder() . "shops.yml", Config::YAML))->getAll();
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 		$this->getLogger()->info("Plugin Enable");
-		$this->economy = $this->getServer()->getPluginManager()->getPlugin("BedrockEconomy");
+		$this->bedrockeconomy = $this->getServer()->getPluginManager()->getPlugin("BedrockEconomy");
 	}
 
     /**
