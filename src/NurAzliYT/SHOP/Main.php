@@ -3,8 +3,6 @@
 namespace NurAzliYT\SHOP;
 
 use cooldogedev\BedrockEconomy\BedrockEconomy;
-use pocketmine\plugin\Plugin;
-use pocketmine\player\Player;
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
 use pocketmine\command\Command;
@@ -14,25 +12,25 @@ use pocketmine\utils\Config;
 class Main extends PluginBase implements Listener {
 
     /** @var Main $instance */
-	public static Main $instance;
+    public static Main $instance;
     /** @var array $shops */
     public array $shops;
-    /** @var EconomyAPI|null $economy */
+    /** @var BedrockEconomy|null $bedrockeconomy */
     public ?BedrockEconomy $bedrockeconomy;
 
     public function onEnable(): void {
-		self::$instance = $this; .
-		$this->saveResource("shops.yml");
-		$this->shops = (new Config($this->getDataFolder() . "shops.yml", Config::YAML))->getAll();
-		$this->getServer()->getPluginManager()->registerEvents($this, $this);
-		$this->getLogger()->info("Plugin Enable");
-		$this->bedrockeconomy = $this->getServer()->getPluginManager()->getPlugin("BedrockEconomy");
-	}
+        self::$instance = $this;
+        $this->saveResource("shops.yml");
+        $this->shops = (new Config($this->getDataFolder() . "shops.yml", Config::YAML))->getAll();
+        $this->getServer()->getPluginManager()->registerEvents($this, $this);
+        $this->getLogger()->info("Plugin Enabled");
+        $this->bedrockeconomy = $this->getServer()->getPluginManager()->getPlugin("BedrockEconomy");
+    }
 
     /**
      * @return Main
      */
-	public static function getInstance(): Main {
+    public static function getInstance(): Main {
         return self::$instance;
     }
 
@@ -43,7 +41,7 @@ class Main extends PluginBase implements Listener {
      * @param array $args
      * @return bool
      */
-	public function onCommand(CommandSender $sender, Command $command, String $label, Array $args) : bool {
+    public function onCommand(CommandSender $sender, Command $command, String $label, array $args): bool {
         if ($command->getName() == "shop") {
             if (!$sender instanceof Player) {
                 $sender->sendMessage("§cPlease run this command in-game.");
